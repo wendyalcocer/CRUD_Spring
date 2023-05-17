@@ -1,5 +1,7 @@
 package com.sinfloo.demo.model;
 
+import java.io.File;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,18 +16,22 @@ public class Persona {
 private int id;
 private String name;
 private String telefono;
-
+private File archivo;
 public Persona(){ 
 	
 	
 }
 
-public Persona(int id, String name, String telefono) {
+public Persona(int id, String name, String telefono , File archivo) {
 	super();
 	this.id = id;
 	this.name = name;
 	this.telefono = telefono;
+	this.archivo= archivo;
+	
 }
+
+
 
 public int getId() {
 	return id;
@@ -49,6 +55,14 @@ public String getTelefono() {
 
 public void setTelefono(String telefono) {
 	this.telefono = telefono;
+}
+
+public File getArchivo() {
+	return archivo;
+}
+
+public void setArchivo(File archivo) {
+	this.archivo = archivo;
 }
 
 }

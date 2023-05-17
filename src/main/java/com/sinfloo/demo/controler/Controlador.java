@@ -44,10 +44,11 @@ public class Controlador {
 	
 	
 	@PostMapping("/save")
-	public String save(@Valid Persona p, Model model)
+	public String save( Persona persona)
 	{
+		System.out.println("obo");
+		service.save(persona);
 		
-		service.save(p);
 		return "redirect:/listar";
 	}
 	
