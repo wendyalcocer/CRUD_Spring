@@ -9,11 +9,13 @@
 <div class="container mt-4">
 
     <div class="col-sm-6">
-        <form th:action="@{/save}" th:object="${persona}" method="POST" enctype="multipart/form-data">
+        <form th:action="@{/save}" th:object="${persona}" method="POST" >
             <div class="card">
-                <div class="card-header"></div>
-                <h3>Modulo Persona</h3>
-                <div class="card-body"></div>
+                <div class="card-header">
+					<h3>Modulo Persona</h3>
+					</div>
+                
+                <div class="card-body">
                 <div class="form-group">
                     <label>ID</label>
                     <input th:field="*{id}" type="text" class="form-control"/>
@@ -28,9 +30,10 @@
                 </div>
                 <div class="form-group">
                     <label>Archivo XML</label>
-                    <input type="file" name="file" class="form-control-file">
+                    <input th:field="*{archivo}" type="file" class="form-control-file">
                 </div>
-                <div class="card-footer"></div>
+                </div>
+                
 
                 <input type="submit" value="Guardar" class="btn btn-success">
 
