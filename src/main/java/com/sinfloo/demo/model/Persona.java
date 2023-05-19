@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,7 +17,9 @@ public class Persona {
 private int id;
 private String name;
 private String telefono;
+
 private File archivo;
+
 public Persona(){ 
 	
 	
@@ -58,11 +61,11 @@ public void setTelefono(String telefono) {
 }
 
 public File getArchivo() {
-	return archivo;
+    return archivo;
 }
 
 public void setArchivo(File archivo) {
-	this.archivo = archivo;
+    this.archivo = archivo;
 }
 
 }
